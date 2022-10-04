@@ -60,6 +60,8 @@ body {
   width: 200px;
 }
 
+
+
 .users {
   background-color: grey;
   display: none;
@@ -95,8 +97,9 @@ label {
 
 input {
   border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nabla', cursive;
   cursor: pointer;
+  background-color: rgb(14, 98, 98);
   
 }
 
@@ -108,4 +111,29 @@ details {
 
 button {
   cursor: pointer;
+}
+
+.add {
+  border: #5d89ff;
+  border-radius: 10px;
+  background-color: #4ca8ee;
+  font-family: 'Silkscreen', cursive;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 150px;
+}
+
+.show {
+  border:#5d89ff;
+  border-radius: 10px;
+  background-color: aquamarine;
+  font-family: 'Silkscreen', cursive;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 150px;
+}
+
+.users {
+  font-family: 'Silkscreen', cursive;
+  color:rgb(14, 98, 98);
 }

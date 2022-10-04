@@ -58,7 +58,7 @@ function App() {
 
   const getUsers = () => {
     axios
-    .get('https://radiant-stream-66845.herokuapp.com/api/users')
+    .get('http://localhost:8000/api/users')
     .then(
       (response) => setUsers(response.data),
       (err) => console.error(err)
@@ -68,7 +68,7 @@ function App() {
   
   const handleCreate = (addUser) => {
     axios
-    .post('https://radiant-stream-66845.herokuapp.com/api/users', addUser)
+    .post('http://localhost:8000/api/users', addUser)
     .then((response) => {
       console.log(response)
       getUsers()
@@ -77,7 +77,7 @@ function App() {
 
   const handleDelete = (event) => {
     axios
-    .delete('https://radiant-stream-66845.herokuapp.com/api/users/' + event.target.value)
+    .delete('http://localhost:8000/api/users/' + event.target.value)
     .then ((response) => {
       getUsers()
     })
@@ -86,7 +86,7 @@ function App() {
   const handleUpdate = (editUser) => {
     console.log(editUser);
     axios
-    .put('https://radiant-stream-66845.herokuapp.com/api/users/' + editUser.id, editUser)
+    .put('http://localhost:8000/api/users/' + editUser.id, editUser)
     .then((response) => {
       setUsers(users.map((user) => {
         return user.id !== editUser.id ? user : editUser
@@ -101,8 +101,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
-        <button onClick={showAddButton}>Add a trainer</button>
-        <button onClick={showTrainer}>Show Trainers</button>
+        <button className='add' onClick={showAddButton}>Add a trainer</button>
+        <button className='show' onClick={showTrainer}>Show Trainers</button>
         {showAdd ? <Add handleCreate={handleCreate} /> : null}
         
         {/* <Nav/> */}
@@ -115,7 +115,7 @@ function App() {
         <button onClick={searchPokemon}>Search Pokemon</button>
         </div>
         <div className='DisplaySection'>{!pokemonChosen ? (
-        <h1> Please choose a pokemon</h1>
+        <h1 className='choose'> Please choose a pokemon</h1>
         ) : (
         <>
         <h1>{pokemon.name}</h1>
