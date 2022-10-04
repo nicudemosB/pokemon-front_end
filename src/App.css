@@ -5,6 +5,10 @@
   font-size: 25px;
   flex-direction: column;
 }
+
+.App h1 {
+  text-align: center;
+}
 body {
   margin: 0%;
   padding: 0%;
@@ -59,6 +63,7 @@ body {
 .DisplaySelection img {
   width: 200px;
 }
+
 
 
 
@@ -137,4 +142,12 @@ button {
 .users {
   font-family: 'Silkscreen', cursive;
   color:rgb(14, 98, 98);
+}
+
+.stats  {
+  display: inline-block;
+}
+
+.pokemon {
+display: inline-block;
 }
