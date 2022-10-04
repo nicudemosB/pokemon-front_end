@@ -12,6 +12,7 @@
 body {
   margin: 0%;
   padding: 0%;
+  background: gray;
 }
 
 .TitleSection {
@@ -105,6 +106,7 @@ input {
   font-family: 'Nabla', cursive;
   cursor: pointer;
   background-color: rgb(14, 98, 98);
+  display: flex;
   
 }
 
@@ -141,7 +143,7 @@ button {
 
 .users {
   font-family: 'Silkscreen', cursive;
-  color:rgb(14, 98, 98);
+  color:rgb(3, 90, 90);
 }
 
 .stats  {
@@ -154,4 +156,5 @@ display: inline-block;
 
 .stats {
   align-items: center;
+  margin-left: 500px;
 }

@@ -4,9 +4,8 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 import Add from './components/Add'
 import Edit from './components/Edit'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Nav from './components/Nav'
 import Trainers from './components/Trainers'
+
 function App() {
 
   const [pokemonName, setPokemonName] = useState('')
@@ -99,16 +98,13 @@ function App() {
   },[])
 
   return (
-    <BrowserRouter>
       <div className='App'>
         <button className='add' onClick={showAddButton}>Add a trainer</button>
         <button className='show' onClick={showTrainer}>Show Trainers</button>
         {showAdd ? <Add handleCreate={handleCreate} /> : null}
-        
-        {/* <Nav/> */}
         <Trainers users = {users} handleUpdate = {handleUpdate} handleDelete = {handleDelete} />
         
-        <div className='TitleSection'>
+      <div className='TitleSection'>
         <h1>Pokemon Collection</h1>
         <input type='text' onChange={(event) => {setPokemonName(event.target.value)}} 
         />
@@ -131,17 +127,11 @@ function App() {
       </div>
         </>
         )}
-
         </div>
       </div>
-      <Routes>
-        <Route exact path = 'api/users'> 
-          {/* <Add/> */}
-        </Route>
-
-      </Routes>
-    </BrowserRouter>
   )
 }
 
 export default App;
+  
+
